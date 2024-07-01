@@ -1,5 +1,7 @@
 # Tinyfetch
 smallest fetch tool for arch based distros
+
+## screenshot
 ![](https://raw.githubusercontent.com/uwusnyslodziak/tinyfetch/main/screenshot.png)
 
 ## Dependencies
