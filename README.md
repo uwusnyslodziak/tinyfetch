@@ -3,7 +3,8 @@ smallest fetch tool for arch based distros
 
 ## Dependencies
 
-you need figlet
+~~you need figlet~~
+jk filget is optional
 
 ## Installation
 ```bash
