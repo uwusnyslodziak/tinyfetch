@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+source /etc/os-release
+source /etc/lsb-release
+distro=$DISTRIB_ID
+distro_name=$PRETTY_NAME
+packages=$(pacman -Q | wc -l)
+user="$(whoami)@$(cat /etc/hostname)"
+shell=$(basename $SHELL)
+
+if [[ "${XDG_SESSION_TYPE}" == "" ]] ; then
+    session="tty"
+else
+    session=$XDG_SESSION_TYPE
+fi
+
+color='\033[1;95m'
+nocolor='\033[0m'
+
+figlet $distro
+echo -e ${color}Distro${nocolor}: $distro_name
+echo -e ${color}User${nocolor}: $user
+echo -e ${color}Packages${nocolor}: $packages
+echo -e ${color}Shell${nocolor}: $shell
+echo -e ${color}Session${nocolor}: $session
+echo
